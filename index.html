@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Base de Conhecimento sobre Séries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Minha Base de Conhecimento sobre Séries</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar séries..." />
+            <button onclick="buscarSerie()">Buscar</button>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <section class="series-container">
+            <!-- Card 1: Breaking Bad -->
+            <div class="serie-card">
+                <h2>Breaking Bad</h2>
+                <p>
+                    Um professor de química do ensino médio diagnosticado com câncer se une a um ex-aluno 
+                    para fabricar e vender metanfetamina, transformando-se gradualmente de um homem comum 
+                    em um perigoso criminoso. Uma obra-prima sobre consequências morais e transformação pessoal.
+                </p>
+                <a href="https://www.amc.com/shows/breaking-bad" target="_blank" class="link-oficial">
+                    Visitar Página Oficial
+                </a>
+            </div>
+
+            <!-- Card 2: Stranger Things -->
+            <div class="serie-card">
+                <h2>Stranger Things</h2>
+                <p>
+                    Ambientada nos anos 80, a série acompanha um grupo de crianças em uma pequena cidade 
+                    que enfrenta forças sobrenaturais e experimentos governamentais secretos após o 
+                    desaparecimento misterioso de um amigo. Nostalgia, mistério e aventura em doses perfeitas!
+                </p>
+                <a href="https://www.netflix.com/title/80057281" target="_blank" class="link-oficial">
+                    Visitar Página Oficial
+                </a>
+            </div>
+
+            <!-- Card 3: The Last of Us -->
+            <div class="serie-card">
+                <h2>The Last of Us</h2>
+                <p>
+                    Baseada no aclamado videogame, a série mostra a jornada de Joel e Ellie através de uma 
+                    América pós-apocalíptica devastada por uma pandemia fúngica. Uma história emocionante 
+                    sobre sobrevivência, amor e redenção em um mundo hostil.
+                </p>
+                <a href="https://www.hbo.com/the-last-of-us" target="_blank" class="link-oficial">
+                    Visitar Página Oficial
+                </a>
+            </div>
+
+            <!-- Card 4: The Office -->
+            <div class="serie-card">
+                <h2>The Office</h2>
+                <p>
+                    Um mockumentary hilarante que retrata o dia a dia dos funcionários de uma empresa de 
+                    papel em Scranton, Pensilvânia. Com humor inteligente e personagens carismáticos, 
+                    a série conquistou fãs ao redor do mundo com suas situações constrangedoras e momentos memoráveis.
+                </p>
+                <a href="https://www.nbc.com/the-office" target="_blank" class="link-oficial">
+                    Visitar Página Oficial
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>Conecte-se comigo:</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://www.github.com" target="_blank">GitHub</a>
+            </div>
+            <p class="copyright">© 2024 - Minha Base de Conhecimento sobre Séries</p>
+        </div>
+    </footer>
+
+    <script>
+        function buscarSerie() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.serie-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h2').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            if (searchTerm === '') {
+                cards.forEach(card => card.style.display = 'block');
+            }
+        }
+        
+        // Permite buscar ao pressionar Enter
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                buscarSerie();
+            }
+        });
+    </script>
+</body>
+</html>
