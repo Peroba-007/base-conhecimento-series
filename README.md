@@ -8,7 +8,45 @@ Uma página web moderna e responsiva para catalogar e buscar informações sobre
 
 ## 📋 Sobre o Projeto
 
-Este projeto é uma Base de Conhecimento interativa sobre séries de TV, desenvolvida como exercício prático de HTML, CSS e JavaScript. A aplicação permite visualizar informações sobre diferentes séries e buscar por títulos ou descrições.
+Base de Conhecimento sobre Séries — Projeto Front-End com Deploy Automatizado
+
+Este projeto é uma aplicação web responsiva e moderna, desenvolvida como parte da Imersão Dev da Alura em parceria com o Google. O objetivo é oferecer uma experiência fluida e visualmente atrativa para consulta e organização de informações sobre séries de TV.
+
+Destaques Técnicos
+
+HTML5 semântico para estrutura clara e acessível
+
+CSS3 avançado com grid, flexbox, animações e gradientes
+
+JavaScript puro para busca dinâmica e interação em tempo real
+
+Design responsivo adaptado para mobile e desktop
+
+Deploy automatizado via GitHub Actions com publicação contínua no GitHub Pages
+
+Funcionalidades
+
+Filtro de séries por título ou descrição
+
+Interface elegante com efeitos visuais e sombreamento
+
+Layout adaptável com responsividade completa
+
+Links externos para páginas oficiais das séries
+
+Performance otimizada com carregamento leve
+
+Infraestrutura
+
+Repositório versionado no GitHub
+
+Workflow personalizado em .github/workflows/static.yml
+
+Publicação automática em GitHub Pages
+
+Estrutura limpa com index.html, styles.css e documentação em README.md
+
+Objetivo Pedagógico Este projeto consolida os aprendizados da Imersão Dev, aplicando conceitos de desenvolvimento web, automação de deploy e boas práticas de código. Ele demonstra domínio técnico, atenção ao design e capacidade de entregar uma solução funcional e escalável.
 
 ## ✨ Funcionalidades
 
